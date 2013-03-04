@@ -1,0 +1,41 @@
+
+$yourColor: #B0B0B0;
+$yourColorDarker: #B0B0B0;
+
+@import "bootstrap";
+@import "bootstrap/buttons";
+
+
+ol.profile_tab {
+	width: 150px;
+
+}
+
+li.btn {
+	background-color:rgb(176,176,176);
+  color:rgb(6, 2, 10);
+}
+
+li.btn{
+	color:rgb(6, 2, 10);
+}
+
+.btn-info{
+	font-size:20px;
+	width:250px;
+	height:35px;
+	margin:2px 0px 1px 0px;
+	text-align: left;
+	font-family: Open Sans;
+
+}
+
+.btn-info {
+  @include buttonBackground($yourColor, $yourColorDarker);
+}
+
+table.data_input{
+	font-size: 18px;
+	font-weight: 5px;
+	color:white;
+}

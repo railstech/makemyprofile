@@ -1,0 +1,37 @@
+<%binding.pry%>
+<%= form_for(@information) do |f| %>
+<%binding.pry%>
+<table class="data_input">
+<tr><td><%=f.label :First_Name %></td>
+<td><%=f.text_field :first_name %></td></tr>
+
+<tr><td><%=f.label :Last_Name %></td>
+<td><%=f.text_field :last_name %></td></tr>
+
+<tr><td><%=f.label :display_name %></td>
+<td><%=f.text_field :display_name %></td></tr>
+
+<tr><td><%=f.label :professional_heading %></td>
+<td><%=f.text_field :professional_heading %></td></tr>
+
+<tr><td><%=f.label :city %></td>
+<td><%=f.text_field :city %></td></tr>
+
+<tr><td><%=f.label :state %></td>
+<td><%=f.text_field :state %></td></tr>
+
+<tr><td><%=f.label :pincode %></td>
+<td><%=f.text_field :pincode %></td></tr>
+
+<tr><td><%=f.label :phone_no %></td>
+<td><%=f.text_field :phone_no %></td></tr>
+
+<tr><td><%=f.label :mobile %></td>
+<td><%=f.text_field :mobile %></td></tr>
+
+<tr><td><%=f.label :email_id %></td>
+for><%=f.text_field :email_id %></td></tr>
+
+<tr><td cols='2'><%=submit_tag "Save"%></td></tr>
+</table>
+<%end%>

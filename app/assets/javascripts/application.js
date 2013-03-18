@@ -13,4 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery_nested_form
+//= require jquery.ui.all
 //= require_tree .
+
+// function remove_fields(link) {
+//         $(link).closest("input[type=hidden]").value = "1";
+//         $(link).parent(".fields").hide();
+// }
+
+// function add_fields(link, association, institute) {
+//   var new_id = new Date().getTime();
+//   var regexp = new RegExp("new_" + association, "g");
+//   $(link).up().insert({
+//         before: content.replace(regexp, new_id)
+//   });
+// }

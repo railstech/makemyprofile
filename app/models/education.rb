@@ -2,22 +2,20 @@ class Education
 	include Mongoid::Document
 #User's Educational information
   #secondary education
+  field :institute, :type => String
 	field :year, :type => Date
 	field :percentage, :type => Integer
-	field :board, :type => String
+	field :university, :type => String
+	field :certificate_name, :type => String
+  field :certificate_details, :type => String
 
-	#higher secondary education
-	field :higher_year, :type => Date
-	field :higher_percentage, :type => Integer
-	field :higher_board, :type => String
+  belongs_to :user
 
-	#graduation education
-	field :grad_year, :type => Date
-	field :grad_percentage, :type => Integer
-	field :grad_board, :type => String
+	validates_presence_of :institute
 
-	#postgraduation secondary education
-	field :pg_year, :type => Date
-	field :pg_percentage, :type => Integer
-	field :pg_board, :type => String
+	validates_presence_of :year
+
+	validates_presence_of :percentage
+	validates_presence_of :university
+
 end

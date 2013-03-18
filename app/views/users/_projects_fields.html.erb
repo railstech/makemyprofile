@@ -1,0 +1,55 @@
+<table class="data_input">
+  
+  <tr>
+  	<td class="heading"><%=f.label :Project_Title %></td>
+	  <td><%=f.text_field :project_title %></td>
+	</tr>>
+
+  <tr>
+  	<td class="heading"><%=f.label :Client %></td>
+	  <td><%=f.text_field :client %></td>
+	</tr>>
+
+  <tr>
+	  <td class="heading"><%=f.label :Start_Date %></td>
+	  <td><%=f.text_field :start_date %></td>
+	</tr>
+  
+  <tr>
+  	<td class="heading"><%=f.label :End_Date %></td>
+	  <td><%=f.text_field :end_date %></td>
+	</tr>
+  
+  <tr>
+  	<td class="heading"><%=f.label :Project_location %></td>
+	  <td><%=f.text_field :project_location %></td>
+	</tr>
+
+  <tr>
+	  <td class="heading"><%=f.label :Employment_Type %></td>
+	  <td><%=f.select :employment_type,options_for_select(%w[Full-Time Part-Time Other]) %></td>
+	</tr>
+
+  <tr>
+  	<td class="heading"><%=f.label :Role %></td>
+	  <td><%=f.text_field :role %></td>
+	</tr>
+
+  <tr>
+ 	  <td class="heading"><%=f.label :Role_Description %></td>
+	  <td><%=f.text_field :role_description %></td>
+	</tr>
+
+  <tr>
+   	<td class="heading"><%=f.label :Team_Size %></td>
+	  <td><%=f.text_field :team_size %></td>
+	</tr>
+  
+  <tr>
+  	<td class="heading"><%=f.label :Skills_Used %></td>
+	  <td><%=f.text_field :skills_used %></td>
+	</tr>
+
+</table>
+
+<%= f.link_to_remove "remove" %>

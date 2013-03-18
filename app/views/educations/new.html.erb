@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+<%= form_for(@education,:url => educations_path(@education)) do |f| %>
+
+ <% if @education.errors.any? %>
+  <div>
+    <h2><%= pluralize(@education.errors.count, "error") %> prohibited this user from being saved:
+    </h2>
+
+    <ul>
+    <% @education.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <%end%> 
+<!--Secondary Education -->
+<table class="data_input">
+
+<tr><td class="heading"><%=f.label :institute %></td>
+<td><%=f.text_field :institute %></td></tr>
+
+<tr><td class="heading"><%=f.label :Passing_year %></td>
+<td><%=f.text_field "year",:class=>"datepicker" %></td></tr>-->
+
+<tr><td class="heading"><%=f.label :percentage %></td>
+<td><%=f.text_field :percentage %></td></tr>
+
+<tr><td class="heading"><%=f.label :University %></td>
+<td><%=f.text_field :university %></td></tr>
+
+<tr><td class="heading"><%=f.label :certificate_name %></td>
+<td><%=f.text_field :certificate_name %></td></tr>
+
+<tr><td class="heading"><%=f.label :certificate_details %></td>
+<td><%=f.text_field :certificate_details %></td></tr>
+
+
+<tr><td colspan='2' align="center"><%=submit_tag "Save"%></td></tr>
+
+</table>
+<%end%>
+
+<%= link_to 'Next', new_experience_path %>

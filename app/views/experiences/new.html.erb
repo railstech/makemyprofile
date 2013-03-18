@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+<%= form_for(@experience,:url => experiences_path(@experience)) do |f| %>
+
+ <% if @experience.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@experience.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+    <ul>
+    <% @experience.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <%end%>
+<!--Secondary Education -->
+<table class="data_input">
+
+<tr><td class="heading"><%=f.label :exp_years %></td>
+<td><%=f.select :exp_years, (0..30)%></td></tr>
+
+<tr><td class="heading"><%=f.label :company_name %></td>
+<td><%=f.text_field :company_name%></td></tr>
+
+<tr><td class="heading"><%=f.label :company_location %></td>
+<td><%=f.text_field :company_location %></td></tr>
+
+<tr><td class="heading"><%=f.label :designation %></td>
+<td><%=f.text_field :designation %></td></tr>
+
+<tr><td class="heading"><%=f.label :employer_status %></td>
+<td><%=f.select :employer_status,options_for_select(%w[Current Previous Other]) %></td></tr>
+
+<tr><td class="heading"><%=f.label :key_skills %></td>
+<td><%=f.text_field :key_skills %></td></tr>
+
+<tr><td class="heading"><%=f.label :job_profile %></td>
+<td><%=f.text_area :job_profile, :size => "5x5"%></td></tr>
+
+
+<tr><td colspan='2' align="center"><%=submit_tag "Save"%></td></tr>
+
+</table>
+<%end%>	
+
+<%= link_to 'Next', new_project_path	 %>
+

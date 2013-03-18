@@ -1,0 +1,13 @@
+<p id="notice">
+	<%= notice %>
+</p>
+
+<%= nested_form_for @user do |f| %>
+  <%= f.fields_for :educations do |builder| %>
+
+    <%= render 'educations_fields', :f => builder %>
+  <%end%>
+  <%=f.link_to_add "ADD", :educations %>  
+<%end%>
+
+<%=link_to 'Experiences', experience_path %>

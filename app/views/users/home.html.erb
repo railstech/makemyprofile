@@ -1,0 +1,46 @@
+<ul class="nav nav-tabs">
+  <li><a href="#info" data-toggle="tab"><h3>Step 1</h3></a></li>
+  <li><a href="#education" data-toggle="tab"><h3>Step 2</h3></a></li>
+  <li><a href="#experience" data-toggle="tab"><h3>Step 3</h3></a></li>
+  <li><a href="#project" data-toggle="tab"><h3>Step 4</h3></a></li>
+</ul>
+
+<div class="tab-content">
+  
+  <div class="tab-pane active" id="info">
+    <%= nested_form_for @user do |f| %>
+      <%= f.fields_for :informations do |builder| %>
+        <%= render 'informations_fields', :f => builder %>
+      <%end%>
+      <%=f.link_to_add "Add Information", :informations %>  
+    <%end%>
+  </div>
+  
+  <div class="tab-pane" id="education">
+    <%= nested_form_for @user do |f| %>
+     <%= f.fields_for :educations do |builder| %>
+       <%= render 'educations_fields', :f => builder %>
+     <%end%>
+     <%=f.link_to_add "Add Education", :educations %>  
+    <%end%>
+  </div>
+  
+  <div class="tab-pane" id="experience">
+    <%= nested_form_for @user do |f| %>
+      <%= f.fields_for :experiences do |builder| %>
+        <%= render 'experiences_fields', :f => builder %>
+      <%end%>
+      <%=f.link_to_add "ADD", :experiences %>  
+    <%end%>
+  </div>
+  
+  <div class="tab-pane" id="project">
+    <%= nested_form_for @user do |f| %>
+      <%= f.fields_for :projects do |builder| %>
+        <%= render 'projects_fields', :f => builder %>
+      <%end%>
+      <%=f.link_to_add "ADD", :projects %>  
+    <%end%>
+  </div>
+
+</div>

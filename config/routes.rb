@@ -2,10 +2,15 @@ Cv::Application.routes.draw do
 
 
   devise_for :users
-
+  resources :users
   # devise_for :users
-  root :to => 'informations#index'
-  resources :informations
+  root :to => 'users#home'
+
+  #match 'users/experiences' => 'users#experiences', :as => 'experience'
+  # resources :informations
+  # resources :educations
+  # resources :experiences
+  # resources :projects
   
  # match 'informations/home' => 'informations#home' 
   # The priority is based upon order of creation:

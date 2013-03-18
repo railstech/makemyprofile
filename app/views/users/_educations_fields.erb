@@ -1,0 +1,35 @@
+<table class="fields">
+
+    <tr>
+      <td class="heading"><%=f.label :institute %></td>
+      <td><%=f.text_field :institute %></td>
+    </tr>
+
+    <tr>
+      <td class="heading"><%=f.label :Passing_year %></td>
+      <td><%=f.text_field "year",:class=>"datepicker" %></td>
+    </tr>
+ 
+    <tr>
+      <td class="heading"><%=f.label :percentage %></td>
+      <td><%=f.text_field :percentage %></td>
+    </tr>
+
+    <tr>
+      <td class="heading"><%=f.label :University %></td>
+      <td><%=f.text_field :university %></td>
+    </tr>
+
+    <tr>
+      <td class="heading"><%=f.label :certificate_name %></td>
+      <td><%=f.text_field :certificate_name %></td>
+    </tr>
+ 
+    <tr>
+      <td class="heading"><%=f.label :certificate_details %></td>
+      <td><%=f.text_field :certificate_details %></td>
+    </tr>
+    
+</table>
+
+<%= f.link_to_remove "remove" %>

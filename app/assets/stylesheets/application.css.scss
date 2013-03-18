@@ -11,6 +11,7 @@
  *= require_self
  *= require bootstrap_overide
  *= require information
+ *= require jquery.ui.all
  */
 
 @import "bootstrap";
@@ -18,6 +19,17 @@
 
 div.container{
  	margin-left: 0;
+}
+
+td.heading{
+	color:white;
+}
+
+h1.heading{
+	color:white;
+}
+div.heading{
+	color:white;
 }
 
 

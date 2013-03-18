@@ -1,37 +1,66 @@
-<%binding.pry%>
-<%= form_for(@information) do |f| %>
-<%binding.pry%>
+
+
+<p id="notice"><%= notice %></p>
+<%= form_for(@information,:url => informations_path(@information)) do |f| %>
+
+ <% if @information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@information.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @information.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+<%end%>
+
 <table class="data_input">
-<tr><td><%=f.label :First_Name %></td>
-<td><%=f.text_field :first_name %></td></tr>
+<tr><td class="heading"><%=f.label :First_Name %></td>
+<td><%=f.text_field :first_name %>&nbsp&nbsp</td>
 
-<tr><td><%=f.label :Last_Name %></td>
-<td><%=f.text_field :last_name %></td></tr>
+<td class="heading"><%=f.label :Last_Name %></td>
+<td>&nbsp<%=f.text_field :last_name %></td></tr>
 
-<tr><td><%=f.label :display_name %></td>
-<td><%=f.text_field :display_name %></td></tr>
+<tr><td class="heading"><%=f.label :dob%></td>
+<td><%=f.text_field "dob",:class=>"datepicker"%></td>
 
-<tr><td><%=f.label :professional_heading %></td>
+<td class="heading"><%=f.label :gender %></td>
+<td><%=f.select :gender,options_for_select(%w[Male Female]) %></td></tr>
+
+<tr><td class="heading"><%=f.label :display_name %></td>
+<td><%=f.text_field :display_name %></td>
+
+<td class="heading"><%=f.label :professional_heading %></td>
 <td><%=f.text_field :professional_heading %></td></tr>
 
-<tr><td><%=f.label :city %></td>
+<tr><td class="heading"><%=f.label :Address %></td>
+<td><%=f.text_area :address,:size=>"3X3" %></td>
+
+<td class="heading"><%=f.label :city %></td>
 <td><%=f.text_field :city %></td></tr>
 
-<tr><td><%=f.label :state %></td>
-<td><%=f.text_field :state %></td></tr>
+<tr><td class="heading"><%=f.label :state %></td>
+<td><%=f.text_field :state %></td>
 
-<tr><td><%=f.label :pincode %></td>
+<td class="heading"><%=f.label :pincode %></td>
 <td><%=f.text_field :pincode %></td></tr>
 
-<tr><td><%=f.label :phone_no %></td>
+<tr><td class="heading"><%=f.label :Marital_status %></td>
+<td><%=f.select :marital_status,options_for_select(%w[Married UnMarried]) %></td>
+
+<td class="heading"><%=f.label :phone_no %></td>
 <td><%=f.text_field :phone_no %></td></tr>
 
-<tr><td><%=f.label :mobile %></td>
-<td><%=f.text_field :mobile %></td></tr>
+<tr><td class="heading"><%=f.label :mobile %></td>
+<td><%=f.text_field :mobile %></td>
 
-<tr><td><%=f.label :email_id %></td>
-for><%=f.text_field :email_id %></td></tr>
+<td class="heading"><%=f.label :email_id %></td>
+<td><%=f.text_field :email_id %></td></tr>
 
-<tr><td cols='2'><%=submit_tag "Save"%></td></tr>
+<tr><td colspan='2' align="center"><%=submit_tag "Save"%></td></tr>
 </table>
+
+<%= link_to 'Next', new_education_path %>
 <%end%>
+

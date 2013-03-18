@@ -1,0 +1,74 @@
+<table class="data_input">
+
+	<tr>
+		<td class="heading"><%=f.label :First_Name %></td>
+	  <td><%=f.text_field :first_name %></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :Last_Name %></td>
+		<td><%=f.text_field :last_name %></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :dob%></td>
+	  <td><%=f.text_field "dob",:class=>"datepicker"%></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :gender %></td>
+		<td><%=f.select :gender,options_for_select(%w[Male Female]) %></td>
+  </tr>
+
+	<tr>
+		<td class="heading"><%=f.label :display_name %></td>
+	  <td><%=f.text_field :display_name %></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :professional_heading %></td>
+	  <td><%=f.text_field :professional_heading %></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :Address %></td>
+	  <td><%=f.text_area :address,:size=>"3X3" %></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :city %></td>
+	  <td><%=f.text_field :city %></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :state %></td>
+	  <td><%=f.text_field :state %></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :pincode %></td>
+	  <td><%=f.text_field :pincode %></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :Marital_status %></td>
+	  <td><%=f.select :marital_status,options_for_select(%w[Married UnMarried]) %></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :phone_no %></td>
+	  <td><%=f.text_field :phone_no %></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :mobile %></td>
+	  <td><%=f.text_field :mobile %></td>
+	</tr>
+
+	<tr>
+		<td class="heading"><%=f.label :email_id %></td>
+	  <td><%=f.text_field :email_id %></td>
+	</tr>
+
+</table>
+<%= f.link_to_remove "remove" %>
